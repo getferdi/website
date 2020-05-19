@@ -35,7 +35,7 @@ class DownloadPage extends Component {
             winPortable: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.exe`,
             linuxAppImage: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.AppImage`,
             linuxDeb: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}_amd64.deb`,
-            linuxRpm: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}.x86_64.rpm`,
+            linuxRpm: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi-${version}.x86_64.rpm`,
             os,
         });
     }
