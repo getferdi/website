@@ -56,7 +56,7 @@ class ServicesPage extends Component {
             <div className={"targets"}>
                 <div className={"title"}>
                   <h2>Services</h2>
-                  <p>Ferdi is compatible with all your favourite services</p>
+                  <p>Ferdi is compatible with all your favorite services</p>
                 </div>
 
                 <input
