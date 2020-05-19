@@ -1,19 +1,19 @@
-import React from "react"
-import { Link } from 'gatsby'
+import { Link } from 'gatsby';
+import React from "react";
 import * as Icon from 'react-feather';
-
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Testimonials from '../components/testimonials'
+import thumbnailFranz from "../../static/images/feature-franz.png";
+import thumbnailMore from "../../static/images/feature-more.png";
+import thumbnailRestrictions from "../../static/images/feature-restrictions.png";
+import thumbnailServices from "../../static/images/feature-services.png";
 import featureImage from "../../static/images/hero.png";
-import thumbnailServices from "../../static/images/feature-services.png"
-import thumbnailFranz from "../../static/images/feature-franz.png"
-import thumbnailRestrictions from "../../static/images/feature-restrictions.png"
-import thumbnailMore from "../../static/images/feature-more.png"
-import testimonialChipde from "../../static/images/testimonials/chipde.png"
-import testimonialMakeuseof from "../../static/images/testimonials/makeuseof.png"
-import testimonialSandromatter from "../../static/images/testimonials/sandromatter.jpg"
-import testimonialJakelee from "../../static/images/testimonials/jakelee.jpeg"
+import testimonialChipde from "../../static/images/testimonials/chipde.png";
+import testimonialJakelee from "../../static/images/testimonials/jakelee.jpeg";
+import testimonialMakeuseof from "../../static/images/testimonials/makeuseof.png";
+import testimonialSandromatter from "../../static/images/testimonials/sandromatter.jpg";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Testimonials from '../components/testimonials';
+
 
 const IndexPage = () => (
     <Layout>
@@ -114,23 +114,51 @@ const IndexPage = () => (
                 {
                     text: 'Ferdi offers no restrictions and no additional features that are subject to a fee. A real download tip!',
                     logo: testimonialChipde,
+                    link: 'https://www.chip.de/downloads/Ferdi_177453674.html',
                     name: 'Chip.de'
                 },
                 {
                     text: 'You can concentrate all of your messaging applications in a single messaging browser, instead of having numerous taskbar and system tray icons.',
                     logo: testimonialMakeuseof,
+                    link: 'https://www.makeuseof.com/tag/best-telegram-desktop-client-apps/',
                     name: 'MakeUseOf.com'
                 },
                 {
                     text: 'To put it simply: I love Ferdi. It does exactly what I want to, costs nothing, lets me keep my privacy.',
                     logo: testimonialJakelee,
+                    link: 'https://blog.jakelee.co.uk/recommendation-ferdi-the-messaging-service-aggregator/',
                     name: 'Jake Lee'
                 },
                 {
                     text: 'Since the lessons at the university are digital I use Ferdi, the all-in-one messenger app.',
                     logo: testimonialSandromatter,
+                    link: 'https://twitter.com/sandromatter/status/1240207292097798147',
                     name: 'Sandro Matter'
                 },
+                {
+                    text: 'Ferdi is a hard-fork of Franz that adds some awesome features and removes unwanted ones.',
+                    logo: null,
+                    link: 'https://www.funkyspacemonkey.com/ferdi-a-free-open-source-cross-platform-all-in-one-messaging-app',
+                    name: 'FunkySpaceMonkey'
+                },
+                {
+                    text: 'For those who like to have all their messaging services centralized in a single app, Ferdi offers a free "all in one" client that goes straight to the point.',
+                    logo: null,
+                    link: 'https://www.geekzone.fr/2020/01/20/ferdi-un-fork-gratuit-de-franz-le-client-de-messagerie-centralise/',
+                    name: 'Geekzone'
+                },
+                {
+                    text: 'When a web application is not being used, it will go into hibernation, which will consume less resources. For this alone, I think it is worth trying Ferdi.',
+                    logo: null,
+                    link: 'https://ubunlog.com/ferdi-un-fork-de-franz/',
+                    name: 'Ubunulog'
+                },
+                {
+                    text: 'Fredi is a useful app that saves you from switching between tabs and devices just to get your messages.',
+                    logo: null,
+                    link: 'https://www.ilovefreesoftware.com/15/windows/business/communications/combine-multiple-messaging-services-in-one-application-ferdi.html',
+                    name: "I Love Free Software"
+                }
             ]}
         />
 

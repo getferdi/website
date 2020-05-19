@@ -1,7 +1,7 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import * as Icon from 'react-feather';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const Testimonials = ({ slides }) => (
   <Carousel 
@@ -24,11 +24,14 @@ const Testimonials = ({ slides }) => (
       <div className="testimonials-item">
         <p>"{slide.text}"</p>
         <div className="testimonials-user">
+          {
+            slide.logo &&
+            <div>
+              <img src={slide.logo} className="testimonials-icon" alt="Logo Testimonial publisher" />
+            </div>
+          }
           <div>
-            <img src={slide.logo} className="testimonials-icon" alt="Logo Testimonial publisher" />
-          </div>
-          <div>
-            <div className="testimonials-name">{slide.name}</div>
+            <div className="testimonials-name"><a href={slide.link}>{slide.name}</a></div>
           </div>
         </div>
       </div>
