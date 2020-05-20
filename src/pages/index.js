@@ -158,6 +158,12 @@ const IndexPage = () => (
                     logo: null,
                     link: 'https://www.ilovefreesoftware.com/15/windows/business/communications/combine-multiple-messaging-services-in-one-application-ferdi.html',
                     name: "I Love Free Software"
+                },
+                {
+                    text: 'Ferdi could become something almost indispensable for those who use a lot of messaging services and want, or need, to keep using them all but from a single, and easily accessible, place.',
+                    logo: null,
+                    link: 'https://www.softpedia.com/get/Internet/Chat/Other-Chat-Tools/Ferdi.shtml',
+                    name: 'Softpedia'
                 }
             ]}
         />
