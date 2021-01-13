@@ -190,7 +190,7 @@ class DownloadPage extends Component {
 
                         <h4>Install with Homebrew</h4>
                         <pre className={"command"}>
-                            $ brew cask install ferdi
+                            $ brew install --cask ferdi
                         </pre>
 
                         <h4>Install AUR package</h4>
