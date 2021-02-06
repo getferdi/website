@@ -187,6 +187,11 @@ class DownloadPage extends Component {
                         </div>
 
                         <h2 className={"download-all"}>or</h2>
+                         
+                        <h4>Install Chocolatey package</h4>
+                        <pre className={"command"}>
+                            $ choco install ferdi
+                        </pre>
 
                         <h4>Install with Homebrew</h4>
                         <pre className={"command"}>
