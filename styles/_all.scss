@@ -2,7 +2,7 @@ $break-small: 719px;
 
 body {
   font-family: Inter;
-  color: #797283;
+  color: #787182;
 
   p {
     font-family: Inter;
@@ -46,7 +46,7 @@ body {
         align-items: center;
 
         a {
-          color: #797283;
+          color: #787182;
           margin-left: 1rem;
           padding-left: 1rem;
           border-left: solid 2px #bbb2c7;
@@ -401,7 +401,7 @@ body {
       }
 
       .links {
-        h4 {
+        h3 {
           font-size: 14px;
           font-weight: bold;
           text-transform: uppercase;
@@ -417,7 +417,7 @@ body {
 
             a {
               font-size: 14px;
-              color: #797283;
+              color: #787182;
 
               &:hover, &:active {
                 color: #CE9FFC;
