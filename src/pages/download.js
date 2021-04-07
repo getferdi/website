@@ -103,7 +103,7 @@ class DownloadPage extends Component {
                             <div className={"center"}>
                                 <div className={"download-button"}>
                                     { os !== 'linux' ? (
-                                        <a href={this.state[os]}>Download for { this.fullOSName(os) }</a>
+                                        <a href={this.state[os]} title="Download Ferdi">Download for { this.fullOSName(os) }</a>
                                     ) : (
                                         <>
                                             <a href={linuxAppImage}>Download AppImage for { this.fullOSName(os) }</a>
@@ -120,7 +120,8 @@ class DownloadPage extends Component {
                         <div className={"row"}>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={win}>
+                                    <a href={win}
+                                    title="Download Ferdi for Windows">
                                         <span>
                                             <FontAwesomeIcon icon={faWindows} />
                                             Download for Windows
@@ -130,7 +131,8 @@ class DownloadPage extends Component {
                             </div>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={winPortable}>
+                                    <a href={winPortable}
+                                    title="Download Ferdi for Windows Portable">
                                         <span>
                                             <FontAwesomeIcon icon={faWindows} />
                                             Download Windows Portable
@@ -143,7 +145,8 @@ class DownloadPage extends Component {
                         <div className={"row"}>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={mac}>
+                                    <a href={mac}
+                                    title="Download Ferdi for Mac">
                                         <span>
                                             <FontAwesomeIcon icon={faApple} />
                                             Download for Mac
@@ -153,7 +156,8 @@ class DownloadPage extends Component {
                             </div>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={linuxAppImage}>
+                                    <a href={linuxAppImage}
+                                    title="Download Ferdi Linux AppImage">
                                         <span>
                                             <FontAwesomeIcon icon={faLinux} />
                                             Download Linux AppImage
@@ -166,7 +170,8 @@ class DownloadPage extends Component {
                         <div className={"row"}>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={linuxDeb}>
+                                    <a href={linuxDeb}
+                                    title="Download Ferdi for Ubuntu (.deb)">
                                         <span>
                                             <FontAwesomeIcon icon={faUbuntu} />
                                             Download for Ubuntu (.deb)
@@ -176,7 +181,8 @@ class DownloadPage extends Component {
                             </div>
                             <div className={"col-6"}>
                                 <div className={"download-button"}>
-                                    <a href={linuxRpm}>
+                                    <a href={linuxRpm}
+                                    title="Download Ferdi RPM">
                                         <span>
                                             <FontAwesomeIcon icon={faRedhat} />
                                             Download RPM

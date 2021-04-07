@@ -45,42 +45,46 @@ const Layout = ({children}) => (
 
                         <div className={"col-3"}>
                             <div className={"widget__item"}>
-                                <ul className={"links"}>
-                                    <h4>Ferdi</h4>
+                                <div className={"links"}>
+                                    <h3>Ferdi</h3>
                                     <ul>
                                         <li><Link to="/" title={"Home"}>Home</Link></li>
                                         <li><Link to="/download" title={"Download"}>Download</Link></li>
                                         <li><Link to="/features" title={"Features"}>Features</Link></li>
                                         <li><Link to="/services" title={"Services"}>Services</Link></li>
-                                        <li><a href={"https://github.com/getferdi/ferdi"}>GitHub</a></li>
-                                        <li><a href={"https://opencollective.com/getferdi"}>Open Collective</a></li>
+                                        <li><a href={"https://github.com/getferdi/ferdi"} title="Ferdi Github">GitHub</a></li>
+                                        <li><a href={"https://opencollective.com/getferdi"} title="Open Collective Ferdi">Open Collective</a></li>
                                     </ul>
-                                </ul>
+                                </div>
                             </div>
                         </div>
 
                         <div className={"col-3"}>
                             <div className={"widget__item"}>
                                 <div className={"links"}>
-                                    <h4>Support</h4>
+                                    <h3>Support</h3>
                                     <ul>
                                         <li>
-                                            <a href="https://help.getferdi.com">
+                                            <a href="https://help.getferdi.com"
+                                            title="Help Center Ferdi">
                                                 Help Center
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://api.getferdi.com/user/account">
+                                            <a href="https://api.getferdi.com/user/account"
+                                            title="Manage your Account">
                                                 Manage your Account
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://api.getferdi.com/import">
+                                            <a href="https://api.getferdi.com/import"
+                                            title="Import data from Franz Account to Ferdi">
                                                 Import your Franz Account
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://github.com/getferdi/ferdi/issues">
+                                            <a href="https://github.com/getferdi/ferdi/issues"
+                                            title="Ferdi GitHub Issues">
                                                 GitHub Issues
                                             </a>
                                         </li>
@@ -92,25 +96,29 @@ const Layout = ({children}) => (
                         <div className={"col-3"}>
                             <div className={"widget__item"}>
                                 <div className={"links"}>
-                                    <h4>Legal</h4>
+                                    <h3>Legal</h3>
                                     <ul>
                                         <li>
-                                            <Link to="/terms">
+                                            <Link to="/terms"
+                                            title="Terms of Service (Website)">
                                                 Terms of Service (Website)
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/privacy">
+                                            <Link to="/privacy"
+                                            title="Privacy policy (Website)">
                                                 Privacy policy (Website)
                                             </Link>
                                         </li>
                                         <li>
-                                            <a href="https://api.getferdi.com/terms">
+                                            <a href="https://api.getferdi.com/terms"
+                                            title="Terms of Service (Ferdi)">
                                                 Terms of Service (Ferdi)
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="https://api.getferdi.com/privacy.html">
+                                            <a href="https://api.getferdi.com/privacy.html"
+                                            title="Privacy policy (Ferdi)">
                                                 Privacy policy (Ferdi)
                                             </a>
                                         </li>
