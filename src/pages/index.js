@@ -189,19 +189,22 @@ const IndexPage = () => (
 
                 <div className={"actions"}>
                     <div className={"button"}>
-                        <a href="https://github.com/getferdi/ferdi">
+                        <a href="https://github.com/getferdi/ferdi"
+                        title="Star on GitHub Ferdi">
                             <Icon.Star />
                             Star on GitHub
                         </a>
                     </div>
                     <div className={"button"}>
-                        <a href="https://twitter.com/intent/tweet?text=Ferdi%3A%20A%20messaging%20browser%20that%20allows%20you%20to%20combine%20your%20favourite%20messaging%20services%20into%20one%20application.%0A%0ACheck%20out%20Ferdi%20at%20https%3A//getferdi.com">
+                        <a href="https://twitter.com/intent/tweet?text=Ferdi%3A%20A%20messaging%20browser%20that%20allows%20you%20to%20combine%20your%20favourite%20messaging%20services%20into%20one%20application.%0A%0ACheck%20out%20Ferdi%20at%20https%3A//getferdi.com"
+                        title="Tell your Friends about Ferdi on Twitter">
                             <Icon.ThumbsUp />
                             Tell your Friends
                         </a>
                     </div>
                     <div className={"button"}>
-                        <a href="https://opencollective.com/getferdi">
+                        <a href="https://opencollective.com/getferdi"
+                        title="Open Collective Ferdi">
                             <Icon.CreditCard />
                             Support our Open Collective
                         </a>
