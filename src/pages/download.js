@@ -53,7 +53,7 @@ class DownloadPage extends Component {
         const macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'];
         const windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'];
         let os;
-      
+
         if (macosPlatforms.indexOf(platform) !== -1) {
           os = 'mac';
         } else if (windowsPlatforms.indexOf(platform) !== -1) {
@@ -61,7 +61,7 @@ class DownloadPage extends Component {
         } else if (!os && /Linux/.test(platform)) {
           os = 'linux';
         }
-      
+
         return os;
     }
 
@@ -98,6 +98,9 @@ class DownloadPage extends Component {
                         <div className={"title"}>
                             <h1>Download Ferdi {release}</h1>
                         </div>
+                        <div>
+                          <h2><u>July 16, 2021</u>: Ferdi v5.5 is very old. We have made tremendous changes since this was released. Since we are in the process of releasing version 5.6.0 in the next few days, we urge you to download the latest beta for your OS from <a href="http://github.com/getferdi/ferdi/releases">here</a> (though these are termed 'beta', they are quite stable).</h2>
+                        </div>
 
                         { os && (
                             <div className={"center"}>
@@ -110,7 +113,7 @@ class DownloadPage extends Component {
                                             <a href={linuxDeb}>Download for Ubuntu (.deb)</a>
                                         </>
                                     )}
-                                    
+
                                 </div>
                             </div>
                         ) }
@@ -193,7 +196,7 @@ class DownloadPage extends Component {
                         </div>
 
                         <h2 className={"download-all"}>or</h2>
-                         
+
                         <h4>Install Chocolatey package</h4>
                         <pre className={"command"}>
                             $ choco install ferdi
