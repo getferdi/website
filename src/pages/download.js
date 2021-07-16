@@ -99,7 +99,7 @@ class DownloadPage extends Component {
                             <h1>Download Ferdi {release}</h1>
                         </div>
                         <div>
-                          <h2><u>July 16, 2021</u>: Ferdi v5.5 is very old. We have made tremendous changes since this was released. Since we are in the process of releasing version 5.6.0 in the next few days, we urge you to download the latest nightly for your OS from <a href="http://github.com/getferdi/nightlies/releases">here</a> (though these are termed 'nightly', they are quite stable).</h2>
+                          <h2><u>July 16, 2021</u>: Ferdi v5.5 is very old. We have made tremendous changes since this was released. Since we are in the process of releasing version 5.6.0 in the next few days, we urge you to download the latest beta for your OS from <a href="http://github.com/getferdi/ferdi/releases">here</a> (though these are termed 'beta', they are quite stable).</h2>
                         </div>
 
                         { os && (
