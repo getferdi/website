@@ -1,0 +1,55 @@
+# This workflow will do a clean install of node dependencies, build the source code and publish the website for getferdi.com
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+# Note: This workflow requires some secrets setup, and set on this repo with the names:
+# 'FERDI_PUBLISH_TOKEN' (A GitHub Personal Access Token with appropriate permissions - for publishing the built artifacts)
+
+name: Ferdi Builds
+
+on:
+  # Push only to master branch
+  push:
+    branches: [master]
+  # PRs only on master branch
+  pull_request:
+    branches: [master]
+  # Manual trigger from the UI
+  workflow_dispatch:
+    inputs:
+      message:
+        description: 'Message for build'
+        required: true
+  schedule:
+    - cron: '0 1 * * *' # every night at 1 am
+
+jobs:
+  build_and_publish:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Set env vars
+        run: echo "NPM_CACHE=$HOME/.npm" >> $GITHUB_ENV
+      - name: Checkout code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          path: ${{ env.NPM_CACHE }}
+          key: ${{ runner.os }}-14.17-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-14.17-build-${{ env.cache-name }}-
+            ${{ runner.os }}-14.17-build-
+      - name: Use Node.js 14.17.3
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14.17.3
+      - name: Install node dependencies recursively
+        run: npm i
+      - name: Build Ferdi without publish for any branch not 'nightly' and not 'release'
+        run: npm run ci-deploy
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.FERDI_PUBLISH_TOKEN }}
