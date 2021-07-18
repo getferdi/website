@@ -49,7 +49,11 @@ jobs:
       - name: Install node dependencies recursively
         run: npm i
       - name: Build Ferdi without publish for any branch not 'nightly' and not 'release'
-        run: npm run ci-deploy
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+
+          npm run ci-deploy
         shell: bash
         env:
           GH_TOKEN: ${{ secrets.FERDI_PUBLISH_TOKEN }}
