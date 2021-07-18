@@ -150,7 +150,7 @@ const AboutPage = () => (
                     <div className={"col-6"}>
                         <div className={"item"}>
                             <Icon.Server className={"item-icon"} />
-                            <h3>Build-in support for over 70 services.</h3>
+                            <h3>Build-in support for over 178 services.</h3>
                             <p>Other services can be added via the "Custom Website" service.</p>
                         </div>
                     </div>

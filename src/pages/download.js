@@ -16,27 +16,89 @@ import SEO from "../components/seo"
 class DownloadPage extends Component {
     state = {
         release: '',
-        mac: '',
-        win: '',
-        linuxAppImage: '',
-        linuxDeb: '',
-        os: '',
+        oses: [],
+        currentOs: '',
     }
 
     componentDidMount() {
         // const version = await this.getLatestRelease();
-        const version = '5.5.0';
-        const os = this.getOS();
+        const version = '5.6.0';
 
         this.setState({
             release: version,
-            mac: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.dmg`,
-            win: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-Setup-${version}.exe`,
-            winPortable: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.exe`,
-            linuxAppImage: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.AppImage`,
-            linuxDeb: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}_amd64.deb`,
-            linuxRpm: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi-${version}.x86_64.rpm`,
-            os,
+            oses: [
+              {
+                osKey: 'mac',
+                osName: 'MacOS',
+                releases: [
+                  {
+                    name: 'Intel, 64bit',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.dmg`,
+                  },
+                  {
+                    name: 'ARM',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}-arm64.dmg`,
+                  },
+                ]
+              },
+              {
+                osKey: 'win',
+                osName: 'Windows',
+                releases: [
+                  {
+                    name: 'Intel, 64bit, exe',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-Setup-${version}.exe`,
+                  },
+                  {
+                    name: 'Intel, 64bit, MSI',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.msi`,
+                  },
+                  {
+                    name: 'Intel, 64bit, Portable',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.exe`,
+                  },
+                  {
+                    name: 'Intel, 32bit, Portable',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}-ia32.msi`,
+                  },
+                ]
+              },
+              {
+                osKey: 'linux',
+                osName: 'Linux',
+                releases: [
+                  {
+                    name: 'Intel, 64bit for Debian, Ubuntu, Mint (.deb)',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}_amd64.deb`,
+                  },
+                  {
+                    name: 'ARM64, 64bit for Debian, Ubuntu, Mint (.deb)',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}_arm64.deb`,
+                  },
+                  {
+                    name: 'ARMv7l, 64bit for Debian, Ubuntu, Mint (.deb)',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi_${version}_armv7l.deb`,
+                  },
+                  {
+                    name: 'Intel, 64bit for Fedora (.rpm)',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi-${version}.x86_64.rpm`,
+                  },
+                  {
+                    name: 'Intel, 64bit for AppImage',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/Ferdi-${version}.AppImage`,
+                  },
+                  {
+                    name: 'Intel, 64bit for freebsd',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi-${version}.freebsd`,
+                  },
+                  {
+                    name: 'Intel, 64bit for Other (.tar.gz)',
+                    releaseUrl: `https://github.com/getferdi/ferdi/releases/download/v${version}/ferdi-${version}.tar.gz`,
+                  },
+                ]
+              },
+            ],
+            currentOs: this.getOS(),
         });
     }
 
@@ -65,29 +127,11 @@ class DownloadPage extends Component {
         return os;
     }
 
-    fullOSName(os) {
-        switch(os) {
-            case 'mac':
-                return 'Mac';
-            case 'win':
-                return 'Windows';
-            case 'linux':
-                return 'Linux';
-            default:
-                return '';
-        }
-    }
-
     render() {
         const {
             release,
-            mac,
-            win,
-            winPortable,
-            linuxAppImage,
-            linuxDeb,
-            linuxRpm,
-            os,
+            oses,
+            // currentOs,
         } = this.state;
 
         return (
@@ -98,102 +142,22 @@ class DownloadPage extends Component {
                         <div className={"title"}>
                             <h1>Download Ferdi {release}</h1>
                         </div>
-                        <div>
-                          <h2><u>July 16, 2021</u>: Ferdi v5.5 is very old. We have made tremendous changes since this was released. Since we are in the process of releasing version 5.6.0 in the next few days, we urge you to download the latest beta for your OS from <a href="http://github.com/getferdi/ferdi/releases">here</a> (though these are termed 'beta', they are quite stable).</h2>
-                        </div>
 
-                        { os && (
-                            <div className={"center"}>
-                                <div className={"download-button"}>
-                                    { os !== 'linux' ? (
-                                        <a href={this.state[os]} title="Download Ferdi">Download for { this.fullOSName(os) }</a>
-                                    ) : (
-                                        <>
-                                            <a href={linuxAppImage}>Download AppImage for { this.fullOSName(os) }</a>
-                                            <a href={linuxDeb}>Download for Ubuntu (.deb)</a>
-                                        </>
-                                    )}
-
-                                </div>
-                            </div>
-                        ) }
-
-                        {os && <h2 className={"download-all"}>All platforms</h2>}
-
-                        <div className={"row"}>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={win}
-                                    title="Download Ferdi for Windows">
-                                        <span>
-                                            <FontAwesomeIcon icon={faWindows} />
-                                            Download for Windows
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={winPortable}
-                                    title="Download Ferdi for Windows Portable">
-                                        <span>
-                                            <FontAwesomeIcon icon={faWindows} />
-                                            Download Windows Portable
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={"row"}>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={mac}
-                                    title="Download Ferdi for Mac">
-                                        <span>
-                                            <FontAwesomeIcon icon={faApple} />
-                                            Download for Mac
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={linuxAppImage}
-                                    title="Download Ferdi Linux AppImage">
-                                        <span>
-                                            <FontAwesomeIcon icon={faLinux} />
-                                            Download Linux AppImage
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={"row"}>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={linuxDeb}
-                                    title="Download Ferdi for Ubuntu (.deb)">
-                                        <span>
-                                            <FontAwesomeIcon icon={faUbuntu} />
-                                            Download for Ubuntu (.deb)
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className={"col-6"}>
-                                <div className={"download-button"}>
-                                    <a href={linuxRpm}
-                                    title="Download Ferdi RPM">
-                                        <span>
-                                            <FontAwesomeIcon icon={faRedhat} />
-                                            Download RPM
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        {
+                          oses.map(eachOs => (
+                            // TODO: Need to highlight the fieldset pertaining to the current OS
+                            <fieldset className={"os-group"}>
+                              <legend>{eachOs.osName}</legend>
+                              <div className={"download-button"}>
+                                  {
+                                    eachOs.releases.map(item => (
+                                      <a href={ item.releaseUrl } title="Download Ferdi">Download for { item.name }</a>
+                                    ))
+                                  }
+                              </div>
+                            </fieldset>
+                          ))
+                        }
 
                         <h2 className={"download-all"}>or</h2>
 
