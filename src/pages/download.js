@@ -1,14 +1,6 @@
 import React, { Component } from "react"
 
 import fetch from 'node-fetch'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {
-    faApple,
-    faWindows,
-    faLinux,
-    faUbuntu,
-    faRedhat,
-} from '@fortawesome/free-brands-svg-icons'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"

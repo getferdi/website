@@ -48,7 +48,7 @@ jobs:
           node-version: 14.17.3
       - name: Install node dependencies recursively
         run: npm i
-      - name: Build Ferdi without publish for any branch not 'nightly' and not 'release'
+      - name: Publish the latest copy of the website
         run: |
           git config user.name github-actions
           git config user.email github-actions@github.com
