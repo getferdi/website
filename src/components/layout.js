@@ -160,7 +160,7 @@ const Layout = ({ children }) => (
               <br />
               <p>Franz and the Franz logo are trademarks or registered trademarks of Franz or Franz’s licensors.</p>
               <p>GitHub and the GitHub logo are trademarks or registered trademarks of GitHub, Inc.</p>
-              <p>This website is not affiliate with Franz, GitHub or any messaging service shown.</p>
+              <p>This website is not affiliated with Franz, GitHub or any of the messaging services shown.</p>
             </div>
           </div>
         </footer>
