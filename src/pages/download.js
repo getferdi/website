@@ -142,7 +142,7 @@ class DownloadPage extends Component {
                 <div className={'download-button'}>
                   {eachOs.releases.map((item) => (
                     <a href={item.releaseUrl} title="Download Ferdi">
-                      Download for {item.name}
+                      {item.name}
                     </a>
                   ))}
                 </div>
