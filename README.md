@@ -27,7 +27,7 @@ Build with GatsbyJS, based on [HiStaff's website-static template](https://github
 ## Deployment
 
 The website is hosted on GitHub pages via the `gh-pages` branch.
-Running the command `yarn deploy` will build the website and automatically push the `public` folder to the `gh-pages` branch.
+Running the command `npm deploy` will build the website and automatically push the `public` folder to the `gh-pages` branch.
 
 ## License
 
