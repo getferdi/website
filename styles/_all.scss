@@ -475,6 +475,12 @@ body {
         font-size: 13px;
       }
     }
+
+    .published {
+      @extend .copyright;
+
+      font-size: 90%;
+    }
   }
 }
 

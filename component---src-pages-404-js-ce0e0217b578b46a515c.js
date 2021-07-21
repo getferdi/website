@@ -1,2 +1,0 @@
-(self.webpackChunkferdi_website=self.webpackChunkferdi_website||[]).push([[883],{9616:function(e,t,n){"use strict";n.r(t);var l=n(7294),a=n(957),r=n(3751);t.default=function(){return l.createElement(a.Z,null,l.createElement(r.Z,{title:"404: Not found"}),l.createElement("div",{className:"container"},l.createElement("h1",null,"We couldn't find this page."),l.createElement("p",null,"Unfortunately, the page you are looking for doesn't exist.")))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-ce0e0217b578b46a515c.js.map
