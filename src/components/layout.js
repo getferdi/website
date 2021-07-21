@@ -12,6 +12,7 @@ import { StaticQuery, graphql, Link } from 'gatsby';
 import Header from './header';
 import '../../static/styles/main.scss';
 import logo from '../../static/images/logo.svg';
+import buildInfo from './buildInfo.json';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -162,6 +163,8 @@ const Layout = ({ children }) => (
               <p>GitHub and the GitHub logo are trademarks or registered trademarks of GitHub, Inc.</p>
               <p>This website is not affiliated with Franz, GitHub or any of the messaging services shown.</p>
             </div>
+
+            <div className={'published'}>Published on: {buildInfo.date}</div>
           </div>
         </footer>
       </>

@@ -11,7 +11,7 @@ Build with GatsbyJS, based on [HiStaff's website-static template](https://github
 1. Install the [GatsbyJS CLI](https://www.gatsbyjs.org/docs/gatsby-cli/)
 2. Build the page
    ```sh
-   npx gatsby build
+   npm run build
    ```
 3. Upload the `public` folder to your webserver
 
@@ -20,14 +20,14 @@ Build with GatsbyJS, based on [HiStaff's website-static template](https://github
 1. Install the [GatsbyJS CLI](https://www.gatsbyjs.org/docs/gatsby-cli/)
 2. Start the development server
    ```sh
-   npx gatsby develop
+   npm run develop
    ```
 3. Open `http://localhost:8000` and start editing
 
 ## Deployment
 
 The website is hosted on GitHub pages via the `gh-pages` branch.
-Running the command `npm deploy` will build the website and automatically push the `public` folder to the `gh-pages` branch.
+Running the command `npm run deploy` will build the website and automatically push the `public` folder to the `gh-pages` branch.
 
 ## License
 

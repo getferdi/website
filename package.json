@@ -30,12 +30,13 @@
   ],
   "license": "MIT",
   "scripts": {
-    "deploy": "gatsby build && cp ./CNAME public/ && gh-pages -d public",
-    "ci-deploy": "gatsby build && cp ./CNAME public/ && gh-pages -d public -r https://$GH_TOKEN@github.com/getferdi/website.git",
-    "build": "gatsby build --output-dir",
-    "develop": "gatsby develop",
+    "deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public",
+    "ci-deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public -r https://$GH_TOKEN@github.com/getferdi/website.git",
+    "prebuild": "echo \"{\\\"date\\\": \\\"`date`\\\"}\" > src/components/buildInfo.json",
+    "build": "gatsby build",
+    "develop": "npm run prebuild && gatsby develop",
     "format": "prettier --write src/**/*.js",
-    "start": "gatsby develop",
+    "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
