@@ -168,6 +168,16 @@ class DownloadPage extends Component {
                             $ yay -S ferdi
                         </pre>
                     </div>
+                    <div>
+                      <p>
+                        <h2>Beta builds</h2>
+                        <span>For those of you would like to help Ferdi by testing the beta builds, you can find them <a href='http://github.com/getferdi/ferdi/releases'>here</a></span>
+                      </p>
+                      <p>
+                        <h2>Nightly builds</h2>
+                        <span>For those of you would like to help Ferdi by testing the nightly builds, you can find them <a href='http://github.com/getferdi/nightlies/releases'>here</a></span>
+                      </p>
+                    </div>
                 </div>
             </Layout>
         );
