@@ -25,7 +25,9 @@ body {
   header {
     background-color: #FDFAFF;
     display: block;
-    padding: 39px 0;
+    padding: 18px;
+    position: fixed;
+    width: 100%;
 
     .logo {
       padding-right: 10px;
@@ -477,9 +479,9 @@ body {
     }
 
     .published {
-      @extend .copyright;
-
-      font-size: 90%;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 80%;
     }
   }
 }
