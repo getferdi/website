@@ -33,12 +33,12 @@
     "deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public",
     "ci-deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public -r https://$GH_TOKEN@github.com/getferdi/website.git",
     "prebuild": "echo \"{\\\"date\\\": \\\"`date`\\\"}\" > src/components/buildInfo.json",
-    "build": "gatsby build",
-    "develop": "npm run prebuild && gatsby develop",
+    "build": "npx gatsby build",
+    "develop": "npm run prebuild && npx gatsby develop",
     "format": "prettier --write src/**/*.js",
     "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
+    "serve": "npx gatsby serve",
+    "clean": "npx gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
