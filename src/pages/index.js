@@ -27,7 +27,7 @@ const IndexPage = () => (
     </div>
 
     <div className={'container'}>
-      <div className={'features'}>
+      <div className={'content'}>
         <h2 className={'features-heading'}>Why Ferdi?</h2>
 
         <div className={'feature__item'}>

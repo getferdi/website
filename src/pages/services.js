@@ -51,7 +51,7 @@ class ServicesPage extends Component {
         <Seo title="Services" />
 
         <div className={'container services'}>
-          <div className={'targets'}>
+          <div className={'content'}>
             <div className={'title'}>
               <h2>Services</h2>
               <p>Ferdi is compatible with all your favorite services</p>

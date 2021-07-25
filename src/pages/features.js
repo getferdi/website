@@ -10,7 +10,7 @@ const AboutPage = () => (
     <Seo title="Features" />
 
     <div className={'container'}>
-      <div className={'targets'}>
+      <div className={'content'}>
         <div className={'title'}>
           <h2>Features</h2>
         </div>
