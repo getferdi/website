@@ -5,11 +5,11 @@
   "author": "Ferdi <hello@getferdi.com>",
   "private": true,
   "dependencies": {
-    "gatsby": "^3.9.1",
+    "gatsby": "^3.10.1",
     "gatsby-plugin-manifest": "^3.10.0",
     "gatsby-plugin-react-helmet": "^4.10.0",
     "gatsby-plugin-sass": "^4.10.0",
-    "gatsby-plugin-sharp": "^3.10.0",
+    "gatsby-plugin-sharp": "^3.10.2",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^3.10.0",
     "gatsby-transformer-sharp": "^3.10.0",
@@ -19,7 +19,7 @@
     "react-feather": "^2.0.9",
     "react-helmet": "^6.1.0",
     "react-responsive-carousel": "^3.2.20",
-    "sass": "^1.35.2"
+    "sass": "^1.36.0"
   },
   "devDependencies": {
     "gh-pages": "^3.2.3",
