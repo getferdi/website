@@ -19,8 +19,6 @@ on:
       message:
         description: 'Message for build'
         required: true
-  schedule:
-    - cron: '0 1 * * *' # every night at 1 am
 
 jobs:
   build_and_publish:
