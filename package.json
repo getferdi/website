@@ -30,8 +30,9 @@
   ],
   "license": "MIT",
   "scripts": {
-    "deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public",
-    "ci-deploy": "npm run build && cp ./CNAME public/ && gh-pages -d public -r https://$GH_TOKEN@github.com/getferdi/website.git",
+    "predeploy": "npm run prebuild && npx gatsby build --prefix-paths",
+    "deploy": "cp ./CNAME public/ && gh-pages -d public",
+    "ci-deploy": "npm run predeploy && cp ./CNAME public/ && gh-pages -d public -r https://$GH_TOKEN@github.com/getferdi/website.git",
     "prebuild": "echo \"{\\\"date\\\": \\\"`date`\\\"}\" > src/components/buildInfo.json",
     "build": "npx gatsby build",
     "develop": "npm run prebuild && npx gatsby develop",

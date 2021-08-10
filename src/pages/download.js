@@ -123,7 +123,7 @@ class DownloadPage extends Component {
     const {
       release,
       oses,
-      // currentOs,
+      currentOs,
     } = this.state;
 
     return (
@@ -136,8 +136,7 @@ class DownloadPage extends Component {
             </div>
 
             {oses.map((eachOs) => (
-              // TODO: Need to highlight the fieldset pertaining to the current OS
-              <fieldset className={'os-group'}>
+              <fieldset id={eachOs.osKey} className={`os-group ${eachOs.osKey == currentOs ? 'currentOs' : ''}`} border='2px'>
                 <legend>{eachOs.osName}</legend>
                 <div className={'download-button'}>
                   {eachOs.releases.map((item) => (
@@ -151,25 +150,25 @@ class DownloadPage extends Component {
 
             <h2 className={'download-all'}>or</h2>
 
-            <h4>Install Chocolatey package</h4>
+            <h4 id='choco'><a href='#choco'>Install Chocolatey package</a></h4>
             <pre className={'command'}>$ choco install ferdi</pre>
 
-            <h4>Install with Homebrew</h4>
+            <h4 id='brew'><a href='#brew'>Install with Homebrew</a></h4>
             <pre className={'command'}>$ brew install --cask ferdi</pre>
 
-            <h4>Install AUR package</h4>
+            <h4 id='yay'><a href='#yay'>Install AUR package</a></h4>
             <pre className={'command'}>$ yay -S ferdi</pre>
           </div>
           <div>
             <p>
-              <h2>Beta builds</h2>
+              <h2 id='beta-builds'><a href='#beta-builds'>Beta builds</a></h2>
               <span>
                 For those of you would like to help Ferdi by testing the beta builds, you can find them{' '}
                 <a href="http://github.com/getferdi/ferdi/releases">here</a>
               </span>
             </p>
             <p>
-              <h2>Nightly builds</h2>
+              <h2 id='nightly-builds'><a href='#nightly-builds'>Nightly builds</a></h2>
               <span>
                 For those of you would like to help Ferdi by testing the nightly builds, you can find them{' '}
                 <a href="http://github.com/getferdi/nightlies/releases">here</a>
