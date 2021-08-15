@@ -4,6 +4,8 @@
 
 Website for Ferdi, displaying its features.
 
+<h1>This repository has been deprecated - please do not make any new changes and/or raise PRs, they will be ignored</h1>
+
 Build with GatsbyJS, based on [HiStaff's website-static template](https://github.com/histaff/website-static).
 
 ## Usage
